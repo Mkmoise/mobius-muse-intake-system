@@ -77,3 +77,67 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// ================================
+// PAGE 2
+// ================================
+
+const nextPage2 = document.getElementById("nextPage2");
+
+if(nextPage2){
+
+    nextPage2.addEventListener("click", function(){
+
+        const pageTwo = document.getElementById("pageTwo");
+
+        if(!pageTwo.checkValidity()){
+
+            pageTwo.reportValidity();
+            return;
+
+        }
+
+        const pageTwoData = {
+
+            engUP: document.getElementById("engUP").value,
+            engJS: document.getElementById("engJS").value,
+
+            kisUP: document.getElementById("kisUP").value,
+            kisJS: document.getElementById("kisJS").value,
+
+            mathUP: document.getElementById("mathUP").value,
+            mathJS: document.getElementById("mathJS").value,
+
+            creUP: document.getElementById("creUP").value,
+            creJS: document.getElementById("creJS").value,
+
+            sciUP: document.getElementById("sciUP").value,
+
+            intSciJS: document.getElementById("intSciJS").value,
+
+            agrUP: document.getElementById("agrUP").value,
+            agrJS: document.getElementById("agrJS").value,
+
+            sstUP: document.getElementById("sstUP").value,
+            sstJS: document.getElementById("sstJS").value,
+
+            casUP: document.getElementById("casUP").value,
+            casJS: document.getElementById("casJS").value,
+
+            preTechJS: document.getElementById("preTechJS").value,
+
+            ppiUP: document.getElementById("ppiUP").value,
+            ppiJS: document.getElementById("ppiJS").value
+
+        };
+
+        localStorage.setItem(
+            "pageTwoData",
+            JSON.stringify(pageTwoData)
+        );
+
+        window.location.href = "page3.html";
+
+    });
+
+}
